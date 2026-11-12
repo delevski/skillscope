@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "acme-search": {
+      "command": "npx",
+      "args": ["-y", "@acme-demo/search-mcp"],
+      "env": { "ACME_API_KEY": "sk-demo-FAKE0000000000000000000000" }
+    },
+    "files": {
+      "command": "npx",
+      "args": ["@acme-demo/files-mcp@1.4.2", "/"]
+    },
+    "reports": {
+      "url": "http://reports.acme-demo.example/mcp",
+      "headers": { "Authorization": "Bearer demo-FAKE-0000000000000000000000000" }
+    },
+    "local-db": {
+      "command": "bash",
+      "args": ["-c", "psql $DATABASE_URL"]
+    }
+  }
+}
